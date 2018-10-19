@@ -115,5 +115,8 @@ describe "NASA Api" do
     it "Should return orbiting_body in close_approach_data as a String" do
       expect(@neo_feed_service.is_object_type_in_close_approach_data "orbiting_body",String).to eq true
     end
+    it "Should return length of relative_velocity in close_approach_data as 4" do
+      expect(@neo_feed_service.length_of_hash_in_close_approach_data "relative_velocity",4).to eq true
+    end
   end
 end

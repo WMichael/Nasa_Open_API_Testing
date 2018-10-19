@@ -124,4 +124,16 @@ class NeoFeedService
     return is_two
   end
 
+  def length_of_hash_in_close_approach_data field,length
+    is_length = true
+    @feed["near_earth_objects"]["2018-03-25"].each do |element|
+      element["close_approach_data"].each do |innerelement|
+        unless innerelement[field].length == length
+          is_length = false
+        end
+      end
+    end
+    return is_length
+  end
+
 end
