@@ -1,4 +1,4 @@
-require_relative "services/neo_feed_serice"
+require_relative "services/neo_feed_service"
 
 class Nasa_API
 
